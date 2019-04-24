@@ -1,0 +1,7 @@
+{
+  "name": "DoAmorApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

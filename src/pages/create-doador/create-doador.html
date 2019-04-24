@@ -1,0 +1,86 @@
+<!-- saved from url=(0142)https://trello-attachments.s3.amazonaws.com/5c9bf714a41103074a2b9e5a/5ca939b244f1a80c9df128d6/48acf5acdbf7b500baf6be208a989522/register-d.html -->
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+  <ion-content class="bgLoginRegister" padding="">
+    <ion-grid style="padding-top: 5em; padding-bottom: 2.5em;">
+      <ion-row>
+        <form novalidate [formGroup]="registerForm" (ngSubmit)="submitForm()">
+
+          <ion-col col-1=""></ion-col>
+          <ion-col col-10="" style="padding-bottom: 2.5em;">
+            <img src="./register-d_files/logo2-branco.png">
+          </ion-col>
+          <ion-col col-1=""></ion-col>
+
+          <ion-col col-12="" text-center="">
+            <h4 style="color: #fff;">Cadastro de Doador</h4>
+          </ion-col>
+
+          <ion-col col-1=""></ion-col>
+          <ion-col col-10="">
+            <ion-item class="input-login">
+              <!--Nome dado na validação do formulário (formControlName="name") nome dado no create-doador.ts da página  -->
+              <ion-input type="text" placeholder="nome" formControlName="name"></ion-input>
+              <ion-icon name="ios-person" class="icon-login" item-left=""></ion-icon>
+            </ion-item>
+          </ion-col>
+          <ion-col col-1=""></ion-col>
+
+          <ion-col col-1=""></ion-col>
+          <ion-col col-10="">
+            <ion-item class="input-login">
+              <!--Nome dado na validação do formulário (formControlName="email") nome dado no create-doador.ts da página  -->
+              <ion-input type="email" placeholder="nome@email.com" formControlName="email"></ion-input>
+              <ion-icon name="ios-mail" class="icon-login" item-left=""></ion-icon>
+            </ion-item>
+          </ion-col>
+          <ion-col col-1=""></ion-col>
+
+          <ion-col col-1=""></ion-col>
+          <ion-col col-10="">
+            <ion-item class="input-login">
+              <!--Nome dado na validação do formulário (formControlName="password") nome dado no create-doador.ts da página  -->
+              <ion-input type="password" placeholder="senha" formControlName="password"></ion-input>
+              <ion-icon name="ios-key" item-left="" class="icon-login"></ion-icon>
+            </ion-item>
+          </ion-col>
+          <ion-col col-1=""></ion-col>
+
+          <ion-col col-1=""></ion-col>
+          <ion-col col-10="">
+            <ion-item class="input-login">
+              <!--Nome dado na validação do formulário (formControlName="passwordConfirm") nome dado no create-doador.ts da página  -->
+              <ion-input type="password" placeholder="confirmar senha" formControlName="passwordConfirm"></ion-input>
+              <ion-icon name="ios-key" item-left="" class="icon-login"></ion-icon>
+            </ion-item>
+          </ion-col>
+          <ion-col col-1=""></ion-col>
+
+          <ion-col col-1=""></ion-col>
+          <ion-col col-10="">
+            <!--Desabilita o botão de cadastrar caso o  formulario registerForm no create-doador.ts não seja atentido-->
+            <button type="submit" ion-button [disabled]="registerForm.invalid" class="btn btn-gradient-primary" full=""
+              round="">Cadastrar</button>
+          </ion-col>
+          <ion-col col-1=""></ion-col>
+
+          <ion-col col-1=""></ion-col>
+          <ion-col col-10="">
+            <button ion-button="" color="light" round="" full="" class="btn btn-sign-in" [navPush]="'home'">Voltar</button>
+          </ion-col>
+          <ion-col col-1=""></ion-col>
+        </form>
+      </ion-row>
+    </ion-grid>
+
+  </ion-content>
+  <object id="__symantecPKIClientMessenger" data-supports-flavor-configuration="true" data-extension-version="0.5.0.109"
+    style="display: none;"></object><span id="__symantecPKIClientDetector" style="display: none;">__PRESENT</span>
+</body>
+
+</html>
