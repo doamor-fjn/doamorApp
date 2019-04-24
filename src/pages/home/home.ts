@@ -84,7 +84,7 @@ export class HomePage {
           // Desconhecido
           default:
             // Chama o metodo de pop-up 
-            this.presentAlert('Erro', 'Erro desconhecido, por favor procurar o suporte')
+            this.presentAlert('Erroa', 'Erro desconhecido, por favor procurar o suporte')
             break;
         }
       })
