@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 844:
+/***/ 842:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PerfilDoadorPageModule", function() { return PerfilDoadorPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__perfil_doador__ = __webpack_require__(854);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__perfil_doador__ = __webpack_require__(852);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var PerfilDoadorPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 854:
+/***/ 852:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -99,12 +99,15 @@ var PerfilDoadorPage = /** @class */ (function () {
     };
     PerfilDoadorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-perfil-doador',template:/*ion-inline-start:"C:\Users\leticia.abreu.silva\Desktop\master\DoAmorApp\src\pages\perfil-doador\perfil-doador.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title> Perfil </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div padding *ngFor="let item of nomeDoadorList">\n        {{ item }}\n  </div>\n\n  <ion-col col-1=""></ion-col>\n  <ion-col col-5="">\n      <button ion-button color="light" round="" full="" class="btn btn-sign-in"\n        [navPush]="\'menu-doador\'">Instituição</button>\n    </ion-col>\n  <ion-col col-1=""></ion-col>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\leticia.abreu.silva\Desktop\master\DoAmorApp\src\pages\perfil-doador\perfil-doador.html"*/,
+            selector: 'page-perfil-doador',template:/*ion-inline-start:"C:\Users\Usuario\Documents\BRANDON\workspaces\ionic\doamorApp\src\pages\perfil-doador\perfil-doador.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title> Perfil </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div padding *ngFor="let item of nomeDoadorList">\n        {{ item }}\n  </div>\n\n  <ion-col col-1=""></ion-col>\n  <ion-col col-5="">\n      <button ion-button color="light" round="" full="" class="btn btn-sign-in"\n        [navPush]="\'menu-doador\'">Instituição</button>\n    </ion-col>\n  <ion-col col-1=""></ion-col>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Usuario\Documents\BRANDON\workspaces\ionic\doamorApp\src\pages\perfil-doador\perfil-doador.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_fire_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_fire_database__["a" /* AngularFireDatabase */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_fire_database__["a" /* AngularFireDatabase */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_fire_auth__["a" /* AngularFireAuth */]])
     ], PerfilDoadorPage);
     return PerfilDoadorPage;
-    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=perfil-doador.js.map

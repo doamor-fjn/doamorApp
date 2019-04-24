@@ -9,12 +9,28 @@
   background: linear-gradient(to bottom right, #1FA3F5, #345CB3);
 }
 
+.btn-gradient-secundary {
+  background: -webkit-gradient(left right, #00a59a, #026b6a);
+  background: -webkit-gradient(linear, left top, right bottom, from(#00a59a), to(#026b6a));
+  background: linear-gradient(to bottom right, #00a59a, #026b6a);
+}
+
 .btn-sign-in {
   color: #00a59a !important;
 }
 
 .bgLoginRegister {
-  background-image: url(../../assets/imgs/background-login.png);
+  background-image: url(../../assets/imgs/bg1.png);
+  background-size: 100%;
+}
+
+.slide1 {
+  background-image: url(../../assets/imgs/bg1.png);
+  background-size: 100%;
+}
+
+.slide2 {
+  background-image: url(../../assets/imgs/bg2.png);
   background-size: 100%;
 }
 
@@ -27,8 +43,25 @@
   border: 2px solid #fff !important;
 }
 
+.input-perfil {
+  border-radius: 64px !important;
+  padding: 0 2.6rem !important;
+  margin: 0.4rem 0.2rem !important;
+  height: 2.8em !important;
+  font-size: 1.6rem !important;
+  border: 1px solid #00a59a !important;
+}
+
 .icon-login {
   color: #b7c4cb;
+}
+
+.item-md ion-icon[item-left] + .item-inner {
+  margin-left: 0px !important;
+}
+
+.button-round-md {
+  padding: 23px 0 !important;
 }
 
 .ion-ios-add:before {
@@ -25723,11 +25756,6 @@ ion-navbar.toolbar {
 .wp .tabs:not(.tabs-ios[tabsPlacement='top']) ion-footer .toolbar:last-child {
   padding-bottom: 4px;
   min-height: 46px;
-}
-
-page-home .custom-title {
-  padding-top: 5em;
-  padding-bottom: 2.5em;
 }
 
 page-start .button-add {

@@ -43,6 +43,7 @@ $colors: (
 
 //Colors
 $primary:         #00a59a;
+$primary_right:   #026b6a;
 $secundary_left:  #1FA3F5;
 $secundary_right: #345CB3;
 $gray:            #b7c4cb;
@@ -57,6 +58,13 @@ $gray:            #b7c4cb;
   background: -o-linear-gradient(bottom right, $secundary_left, $secundary_right);
   background: -moz-linear-gradient(bottom right, $secundary_left, $secundary_right);
   background: linear-gradient(to bottom right, $secundary_left, $secundary_right);
+ }
+
+.btn-gradient-secundary {
+  background: -webkit-gradient(left right, $primary, $primary_right);
+  background: -o-linear-gradient(bottom right, $primary, $primary_right);
+  background: -moz-linear-gradient(bottom right, $primary, $primary_right);
+  background: linear-gradient(to bottom right, $primary, $primary_right);
   }
 
 .btn-sign-in {
@@ -65,7 +73,18 @@ $gray:            #b7c4cb;
 
 //Backgroud Login/Register
 .bgLoginRegister{
-  background-image: url(../../assets/imgs/background-login.png);
+  background-image: url(../../assets/imgs/bg1.png);
+  background-size: 100%;
+}
+
+//Slide
+.slide1{
+  background-image: url(../../assets/imgs/bg1.png);
+  background-size: 100%;
+}
+
+.slide2{
+  background-image: url(../../assets/imgs/bg2.png);
   background-size: 100%;
 }
 
@@ -79,9 +98,19 @@ $gray:            #b7c4cb;
   border: 2px solid #fff!important;
 }
 
+.input-perfil {
+  border-radius: 64px!important;
+  padding: 0 2.6rem!important;
+  margin: 0.4rem 0.2rem!important;
+  height: 2.8em!important;
+  font-size: 1.6rem!important;
+  border: 1px solid $primary!important;
+}
+
 .icon-login {
   color: $gray;
 }
+
 
 // App iOS Variables
 // --------------------------------------------------
@@ -94,7 +123,13 @@ $gray:            #b7c4cb;
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
+.item-md ion-icon[item-left] + .item-inner {
+  margin-left: 0px!important;
+}
 
+.button-round-md {
+  padding: 23px 0!important;
+}
 
 
 // App Windows Variables

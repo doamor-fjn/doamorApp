@@ -1,19 +1,48 @@
-<ion-content>
-  <ion-slides pager="true" speed="100">
-    <ion-slide>
-      <img
-        src="https://trello-attachments.s3.amazonaws.com/5c9bf714a41103074a2b9e5a/5ca93ce263ec933a1ebafcb8/4bbeb13b432b1a2af0c5216b7d211ef9/image.png" />
-    </ion-slide>
-    <ion-slide>
-      <img src="http://www.carlesmarcos.com/wp-content/uploads/2016/01/DAR-ANTES-QUE-RECIBIR.jpg" />
-    </ion-slide>
-    <ion-slide>
-      <img
-        src="https://trello-attachments.s3.amazonaws.com/5c9bf714a41103074a2b9e5a/5ca93ce263ec933a1ebafcb8/4bbeb13b432b1a2af0c5216b7d211ef9/image.png" />
-    </ion-slide>
-  </ion-slides>
-  <ion-col col-5="">
-    <!--Nomeia a página para redirecionamento ([navPush]="'create-instit'") nome dado no HTML da página  -->
-    <button ion-button color="light" round="" full="" class="btn btn-sign-in" [navPush]="'menu-doador'">Pular</button>
-  </ion-col>
-</ion-content>
+<ion-content class="tutorial-page">
+
+    <ion-slides pager="true" speed="100">
+  
+      <ion-slide class="slide1">
+        <ion-grid >
+          <ion-row>
+            <ion-col col-1></ion-col>
+            <ion-col col-10>
+              <img src="../../assets/imgs/logo2-branco.png"/>
+            </ion-col>
+            <ion-col col-1></ion-col>
+            <!--<ion-col col-1></ion-col>-->
+            <ion-col col-12>
+              <p style="color: #fff">O doAmor foi pensado para você fazer o bem com apenas alguns cliques.</p>
+            </ion-col>
+            <!--<ion-col col-1></ion-col>-->
+          </ion-row>
+        </ion-grid>
+          <ion-footer>
+          <ion-buttons end>
+            <!--Nomeia a página para redirecionamento ([navPush]="'create-instit'") nome dado no HTML da página  -->
+            <button ion-button clear color="light" [navPush]="'menu-doador'">Pular</button>
+          </ion-buttons>
+        </ion-footer>
+      </ion-slide>
+    
+      <ion-slide class="slide2">
+        <ion-grid >
+          <ion-row>
+            <ion-col col-1></ion-col>
+            <ion-col col-10>
+              <img src="../../assets/imgs/logo2-branco.png"/>
+            </ion-col>
+            <ion-col col-1></ion-col>
+            <ion-col col-12>
+              <p style="color: #fff">Você transforma uma ou mais vidas com um recurso disponível na palma da sua mão e de fácil acesso. Explore-nos.</p>
+            </ion-col>
+            <ion-col col-12>
+              <button ion-button large clear icon-end color="light" [navPush]="'menu-doador'">Entrar <ion-icon color="light" name="arrow-forward" ></ion-icon></button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+    
+    </ion-slides>
+  
+  </ion-content>

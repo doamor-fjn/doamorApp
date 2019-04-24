@@ -1,83 +1,71 @@
-<html>
+<!--
+  Generated template for the LoginPage page.
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-</head>
-
-<body>
-  <ion-content class="bgLoginRegister" padding="">
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content class="bgLoginRegister" padding>
     <ion-grid style="padding-top: 5em; padding-bottom: 2.5em;">
       <ion-row>
-
-        <ion-col col-1=""></ion-col>
-        <ion-col col-10="" style="padding-top: 5em; padding-bottom: 2.5em;">
-          <img src="./login_files/logo2-branco.png">
+          <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+        <ion-col col-1></ion-col>
+        <ion-col col-10 style="padding-top: 5em; padding-bottom: 2.5em;">
+          <img src="../../assets/imgs/logo2-branco.png"/>
         </ion-col>
-        <ion-col col-1=""></ion-col>
+        <ion-col col-1></ion-col>
 
-        <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
-          <ion-col col-1=""></ion-col>
-          <ion-col col-10="">
-            <ion-item class="input-login">
-              <!--Nome dado na validação do formulário (formControlName="email") nome dado no login.ts da página  -->
-              <ion-input type="email" placeholder="nome@email.com" formControlName="email"></ion-input>
-              <ion-icon name="ios-mail" class="icon-login" item-left=""></ion-icon>
-            </ion-item>
-          </ion-col>
-          <ion-col col-1=""></ion-col>
+        
+        <ion-col col-1></ion-col>
+        <ion-col col-10 >
+          <!--Nome dado na validação do formulário (formControlName="email") nome dado no login.ts da página  -->
+          <ion-item class="input-login">
+            <ion-input type="email"  placeholder="email" formControlName="email"></ion-input>
+            <ion-icon name="ios-mail" class="icon-login" item-left></ion-icon>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1></ion-col>
 
-          <ion-col col-1=""></ion-col>
-          <ion-col col-10="">
-            <ion-item class="input-login">
-              <!--Nome dado na validação do formulário (formControlName="password") nome dado no login.ts da página  -->
-              <ion-input type="password" placeholder="senha" formControlName="password"></ion-input>
-              <ion-icon name="ios-key" item-left="" class="icon-login"></ion-icon>
-            </ion-item>
-          </ion-col>
-          <ion-col col-1=""></ion-col>
+        <ion-col col-1></ion-col>
+        <ion-col col-10>
+          <!--Nome dado na validação do formulário (formControlName="password") nome dado no login.ts da página  -->
+          <ion-item class="input-login">
+            <ion-input type="password"  placeholder="senha" formControlName="password"></ion-input>
+            <ion-icon name="ios-key" item-left class="icon-login"></ion-icon>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1></ion-col>
 
-          <ion-col col-1=""></ion-col>
-          <ion-col col-10="">
-            <button type="submit" ion-button [disabled]="loginForm.invalid" class="btn btn-gradient-primary" full=""
-              round="">Entrar</button>
-          </ion-col>
-          <ion-col col-1=""></ion-col>
+        <ion-col col-1></ion-col>
+        <ion-col col-10>
+          <button ion-button class="btn btn-gradient-primary" full round type="submit" ion-button [disabled]="loginForm.invalid">Entrar</button>
+        </ion-col>
+        <ion-col col-1></ion-col>
+
         </form>
 
-        <ion-col col-12="" text-center="">
-          <p style="color: #fff;">Não tem uma conta? Crie aqui</p>
+        <ion-col col-12 text-center>
+          <p style="color: #fff;" >Não tem uma conta? Crie aqui</p>
         </ion-col>
 
 
-        <ion-col col-1=""></ion-col>
-        <ion-col col-5="">
+        <ion-col col-1></ion-col>
+        <ion-col col-5>
           <!--Nomeia a página para redirecionamento ([navPush]="'creater-doador'") nome dado no HTML da página  -->
-          <button ion-button color="light" round="" full="" class="btn btn-sign-in"
-            [navPush]="'create-doador'">Doador</button>
+          <button ion-button color="light" round full class="btn btn-sign-in" [navPush]="'create-doador'">Doador</button>
         </ion-col>
-        <ion-col col-5="">
+        <ion-col col-5>
           <!--Nomeia a página para redirecionamento ([navPush]="'create-instit'") nome dado no HTML da página  -->
-          <button ion-button color="light" round="" full="" class="btn btn-sign-in"
-            [navPush]="'create-instit'">Instituição</button>
+          <button ion-button color="light" round full class="btn btn-sign-in" [navPush]="'create-instit'">Instituição</button>
         </ion-col>
-         <ion-col col-5="">
-          <button ion-button color="light" round="" full="" class="btn btn-sign-in"
-            [navPush]="'menu-doador'">Instituição</button>
-        </ion-col>
-        <ion-col col-1=""></ion-col>  
+        <ion-col col-1></ion-col>
 
-        <ion-col col-12="" text-center="">
-          <a style="color: #fff;"
-            href="https://trello-attachments.s3.amazonaws.com/5c9bf714a41103074a2b9e5a/5ca9337ed38e991996621095/5413c4496a71eaaa4a2e6f063b30483c/login.html">Esqueceu
-            a senha? Clique aqui.</a>
+        <ion-col col-12 text-center  >
+          <a style="color: #fff;" href="">Esqueceu a senha? Clique aqui.</a>
         </ion-col>
-
+        
       </ion-row>
     </ion-grid>
 
-  </ion-content>
-  <object id="__symantecPKIClientMessenger" data-supports-flavor-configuration="true" data-extension-version="0.5.0.109"
+</ion-content>
+<object id="__symantecPKIClientMessenger" data-supports-flavor-configuration="true" data-extension-version="0.5.0.109"
     style="display: none;"></object><span id="__symantecPKIClientDetector" style="display: none;">__PRESENT</span>
-</body>
-
-</html>
