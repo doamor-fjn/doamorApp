@@ -24,11 +24,11 @@ A aplicação estará disponível nas plataformas Android e iOS. Desenvolvida na
 - [x] Cadastro Doador / *Donor Registration*
 - [x] Intro (Slide)
 - [ ] Home Instituição / *Home Institution*
-- [ ] Home Doador / *Home Donor*
+- [x] Home Doador / *Home Donor*
 - [ ] Perfil Instituição / *Profile Institution*
-- [ ] Perfil Doador / *Profile Donor*
+- [x] Perfil Doador / *Profile Donor*
 - [ ] Editar Perfil Instituição / *Edit Profile Institution*
-- [ ] Editar Perfil Doador / *Edit Profile Donor*
+- [x] Editar Perfil Doador / *Edit Profile Donor*
 - [ ] Mapa de Instituições / *Map of Institutions*
 - [ ] Lista de Instituições / *List of Institutions*
 - [ ] Instituição / *Institution*
