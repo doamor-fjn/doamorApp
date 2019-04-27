@@ -1,47 +1,58 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title> Alteração de Dados </ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar color="primary">
+      <ion-title>Ediar perfil</ion-title>
+    </ion-navbar>
+  </ion-header>
 
-<ion-content padding>
+  <ion-content padding>
+      <ion-grid style="padding-top: 5em; padding-bottom: 2.5em;">
+        <ion-row>
+            <ion-col col-1></ion-col>
+            <ion-col col-10>
+              <ion-item class="input-perfil">
+                <ion-icon name="ios-person" class="icon-login" item-left></ion-icon>
+                <ion-input type="text" placeholder="Razão Social" value="{{ nomeDoador }}"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col col-1></ion-col>
 
-  <ion-item>
-    <ion-label position="fixed">Nome Doador: </ion-label>
-    <br>
-    <ion-input value="{{ nomeDoador }}"></ion-input>
-  </ion-item>
+            <ion-col col-1></ion-col>
+            <ion-col col-10>
+              <ion-item class="input-perfil">
+                <ion-icon name="ios-mail" class="icon-login" item-left></ion-icon>
+                <ion-input type="text" placeholder="Razão Social" value="{{ emailDoador }}" disabled="{{isDisabled}}"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col col-1></ion-col>
 
-  <ion-item>
-    <ion-label position="fixed">E-mail: </ion-label>
-    <br>
-    <ion-input value="{{ emailDoador }}"></ion-input>
-  </ion-item>
+            <ion-col col-1></ion-col>
+            <ion-col col-10>
+              <ion-item class="input-perfil">
+                <ion-icon name="ios-calendar" class="icon-login" item-left></ion-icon>
+                <ion-input type="text" placeholder="Razão Social" value="{{ dataNascDoador }}"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col col-1></ion-col>
 
-  <ion-item>
-    <ion-label position="fixed">Data Nascimento: </ion-label>
-    <br>
-    <ion-input value="{{ dataNascDoador }}"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="fixed">Sexo: </ion-label>
-    <br>
-    <ion-input value="{{ sexoDoador }}"></ion-input>
-  </ion-item>
+            <ion-col col-1></ion-col>
+            <ion-col col-10>
+              <ion-item class="input-perfil">
+                <ion-icon name="ios-people" class="icon-login" item-left></ion-icon>
+                <ion-input type="text" placeholder="Razão Social" value="{{ sexoDoador }}"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col col-1></ion-col>
 
 
   <ion-col col-1></ion-col>
-  <ion-col col-5>
-    <button ion-button color="light" round full class="btn btn-sign-in" [navPush]="'perfil-doador'">Voltar</button>
-  </ion-col>
-  <ion-col col-1></ion-col>
-
-  <ion-col col-1></ion-col>
-  <ion-col col-5>
-      <button ion-button (click)="alterarDoador()" color="light" round full class="btn btn-sign-in"
-      [navPush]="'menu-doador'">Confirmar</button>
-  </ion-col>
-  <ion-col col-1></ion-col>
+      <ion-col col-5>
+        <button ion-button color="light" round full class="btn btn-sign-in" [navPush]="'perfil-doador'">Cancelar</button>
+      </ion-col>
+      <ion-col col-5>
+        <button ion-button round full class="btn btn-gradient-secundary" (click)="alterarDoador()" [navPush]="'menu-doador'">Salvar</button>
+      </ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

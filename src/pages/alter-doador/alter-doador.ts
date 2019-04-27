@@ -41,7 +41,6 @@ export class AlterDoadorPage {
       .then((resolve) => {
         this.uid = resolve;
         this.getList();
-        this.alterarDoador();
       })
   }
 
