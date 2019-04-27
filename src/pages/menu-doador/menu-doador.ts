@@ -48,8 +48,13 @@ export class MenuDoadorPage {
     // Tira uma foto do banco no momento atual
     addClna.on('value', (snapshot) => {
       const items = snapshot.val();
-      this.nomeDoador = items.nomeDoador;
+      if(items == null){
+        this.navCtrl.setRoot('home');
+      }else{
+        this.nomeDoador = items.nomeDoador;
+      }
     })
+
 
   }
 }

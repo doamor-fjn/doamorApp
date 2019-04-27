@@ -51,10 +51,14 @@ export class AlterDoadorPage {
     // Tira uma foto do banco no momento atual
     addClna.on('value', (snapshot) => {
       const items = snapshot.val();
-      this.dataNascDoador = items.dataNascDoador;
-      this.emailDoador = items.emailDoador;
-      this.nomeDoador = items.nomeDoador;
-      this.sexoDoador = items.sexoDoador;
+      if(items == null){
+        this.navCtrl.setRoot('home');
+      }else{
+        this.dataNascDoador = items.dataNascDoador;
+        this.emailDoador = items.emailDoador;
+        this.nomeDoador = items.nomeDoador;
+        this.sexoDoador = items.sexoDoador;
+      }
     })
   }
 

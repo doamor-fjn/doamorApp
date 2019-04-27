@@ -1,45 +1,59 @@
 <ion-header>
-    <ion-navbar color="primary">
-      <ion-title>Perfil</ion-title>
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
 
-  <ion-content padding>
-    <ion-item>
-      <ion-label position="fixed">Nome: </ion-label>
-      <br>
-      <ion-label >{{ nomeDoador }}</ion-label>
-    </ion-item>
+<ion-content >
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1></ion-col>
+      <ion-col col-10 center>
+        <img style="border-radius: 50%;" src="../../assets/imgs/avatar.png" />
+      </ion-col>
+      <ion-col col-1></ion-col>
 
-    <ion-item>
-      <ion-label position="fixed">E-mail: </ion-label>
-      <br>
-      <ion-label >{{ emailDoador }}</ion-label>
-    </ion-item>
- 
-    <ion-item>
-      <ion-label position="fixed">Data Nascimento: </ion-label>
-      <br>
-      <ion-label >{{ dataNascDoador }}</ion-label>
-    </ion-item>
- 
-    <ion-item>
-      <ion-label position="fixed">Sexo: </ion-label>
-      <br>
-      <ion-label >{{ sexoDoador }}</ion-label>
-    </ion-item>
+      <ion-col col-1></ion-col>
+      <ion-col col-10>
+        <h2>{{ nomeDoador }}</h2>
+      </ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-col col-1></ion-col>
-    <ion-col col-5>
-      <button ion-button color="light" round full class="btn btn-sign-in" [navPush]="'alter-doador'">Alterar</button>
-    </ion-col>
-    <ion-col col-1></ion-col>
 
-    <ion-col col-1></ion-col>
-    <ion-col col-5>
-      <button ion-button (click)="removeDoador()" color="light" round full class="btn btn-sign-in"
-        [navPush]="'home'">Remover</button>
-    </ion-col>
-    <ion-col col-1></ion-col>
+      <ion-list>
+        <ion-item>
+          <a color="primary">Email</a>
+          <p>{{ emailDoador }}</p>
+        </ion-item>
 
-  </ion-content>
+        <ion-item>
+          <a color="primary">Data de Nascimento</a>
+          <p>{{ dataNascDoador }}</p>
+        </ion-item>
+
+        <ion-item>
+          <a color="primary">Sexo</a>
+          <p>{{ sexoDoador }}</p>
+        </ion-item>
+      </ion-list>
+
+      <ion-grid>
+          <ion-row>
+      <ion-col col-1></ion-col>
+      <ion-col col-10>
+        <button ion-button color="light" round full class="btn btn-sign-in" [navPush]="'alter-doador'">Editar</button>
+      </ion-col>
+      <ion-col col-1></ion-col>
+
+      <ion-col col-1></ion-col>
+      <ion-col col-10>
+        <a color="primary" (click)="removeDoador()" href="">Excluir conta</a>
+      </ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
