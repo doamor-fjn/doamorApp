@@ -7,17 +7,18 @@
   <ion-content padding>
    
     <div class="container-buttons">
+      <h3>Olá, {{ nomeDoador }}</h3>
       <!--Nomeia a página para redirecionamento ([navPush]="'creater-doador'") nome dado no HTML da página  -->
       <button ion-button block [navPush]="'perfil-doador'">
-          Perfil
+          Perfil 
           <ion-icon name="person"></ion-icon>
         </button>
         <button ion-button block [navPush]="'start-page'">
-          Instituições
+          Instituições 
           <ion-icon name="home"></ion-icon>
         </button>
         <button ion-button block [navPush]="'home'">
-          Sair
+          Sair 
           <ion-icon name="log-out"></ion-icon>
         </button>
     </div>

@@ -48,7 +48,8 @@ export class MenuDoadorPage {
     // Tira uma foto do banco no momento atual
     addClna.on('value', (snapshot) => {
       const items = snapshot.val();
-      this.nomeDoadorList = Object.keys(items).map(i => items[i])
+      this.nomeDoador = items.nomeDoador;
     })
+
   }
 }
