@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 844:
+/***/ 845:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -110,7 +110,7 @@ var StartPage = /** @class */ (function () {
     };
     StartPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-start',template:/*ion-inline-start:"C:\Users\Usuario\Documents\BRANDON\workspaces\ionic\doamorApp\src\pages\start\start.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title> Menu </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item>\n    <ion-input type="text" placeholder = "Digite sua Tarefa" [(ngModel)]="task"></ion-input>\n  </ion-item>\n  <button ion-button block class="button-add"(click)="addTask(task)"\n  [disabled]="!task || task.length < 3">Adicionar Tarefa</button>\n  <div padding>\n    <ul>\n      <li *ngFor="let item of listTask">\n        {{ item.task }}\n      </li>\n    </ul>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Usuario\Documents\BRANDON\workspaces\ionic\doamorApp\src\pages\start\start.html"*/,
+            selector: 'page-start',template:/*ion-inline-start:"C:\Users\leticia.abreu.silva\Desktop\master\DoAmorApp\src\pages\start\start.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title> Menu </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item>\n    <ion-input type="text" placeholder = "Digite sua Tarefa" [(ngModel)]="task"></ion-input>\n  </ion-item>\n  <button ion-button block class="button-add"(click)="addTask(task)"\n  [disabled]="!task || task.length < 3">Adicionar Tarefa</button>\n  <div padding>\n    <ul>\n      <li *ngFor="let item of listTask">\n        {{ item.task }}\n      </li>\n    </ul>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\leticia.abreu.silva\Desktop\master\DoAmorApp\src\pages\start\start.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],

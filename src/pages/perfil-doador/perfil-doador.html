@@ -5,15 +5,43 @@
 </ion-header>
 
 <ion-content padding>
-  <div padding *ngFor="let item of nomeDoadorList">
-        {{ item }}
-  </div>
 
-  <ion-col col-1=""></ion-col>
-  <ion-col col-5="">
-      <button ion-button color="light" round="" full="" class="btn btn-sign-in"
-        [navPush]="'menu-doador'">Instituição</button>
+  <ion-content padding>
+    <ion-item>
+      <ion-label position="fixed">Nome: </ion-label>
+      <br>
+      <ion-label >{{ nomeDoador }}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="fixed">E-mail: </ion-label>
+      <br>
+      <ion-label >{{ emailDoador }}</ion-label>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label position="fixed">Data Nascimento: </ion-label>
+      <br>
+      <ion-label >{{ dataNascDoador }}</ion-label>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label position="fixed">Sexo: </ion-label>
+      <br>
+      <ion-label >{{ sexoDoador }}</ion-label>
+    </ion-item>
+
+    <ion-col col-1></ion-col>
+    <ion-col col-5>
+      <button ion-button color="light" round full class="btn btn-sign-in" [navPush]="'alter-doador'">Alterar</button>
     </ion-col>
-  <ion-col col-1=""></ion-col>
+    <ion-col col-1></ion-col>
 
-</ion-content>
+    <ion-col col-1></ion-col>
+    <ion-col col-5>
+      <button ion-button (click)="removeDoador()" color="light" round full class="btn btn-sign-in"
+        [navPush]="'home'">Remover</button>
+    </ion-col>
+    <ion-col col-1></ion-col>
+
+  </ion-content>

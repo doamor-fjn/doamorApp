@@ -21,7 +21,10 @@ import { AngularFireDatabase } from '@angular/fire/database';
 export class PerfilDoadorPage {
 
   uid: string;
+  dataNascDoador;
+  emailDoador;
   nomeDoador;
+  sexoDoador;
   nomeDoadorList;
 
   constructor(
@@ -51,8 +54,28 @@ export class PerfilDoadorPage {
     // Tira uma foto do banco no momento atual
     addClna.on('value', (snapshot) => {
       const items = snapshot.val();
-      this.nomeDoadorList = Object.keys(items).map(i => items[i])
+      this.dataNascDoador = items.dataNascDoador;
+      this.emailDoador = items.emailDoador;
+      this.nomeDoador = items.nomeDoador;
+      this.sexoDoador = items.sexoDoador;
     })
+
+  }
+
+  // Metodo para remover chave do usuário
+  removeDoador() {
+    this.navCtrl.setRoot('menu-doador');
+    var nomeTab = this.db.database.ref('DadosDoadores');
+    var removeClna = nomeTab.child(this.uid);
+    // Tira uma foto do banco no momento atual
+    this.db.object(removeClna).remove()
+      .then(function () {
+        console.log("Remove succeeded.")
+      })
+      .catch(function (error) {
+        console.log("Remove failed: " + error.message)
+      });
+
   }
 
 }

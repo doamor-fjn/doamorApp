@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 845:
+/***/ 844:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StartDoadorPageModule", function() { return StartDoadorPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__start_doador__ = __webpack_require__(855);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__start_doador__ = __webpack_require__(853);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var StartDoadorPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 855:
+/***/ 853:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72,7 +72,7 @@ var StartDoadorPage = /** @class */ (function () {
     };
     StartDoadorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-start-doador',template:/*ion-inline-start:"C:\Users\Usuario\Documents\BRANDON\workspaces\ionic\doamorApp\src\pages\start-doador\start-doador.html"*/'<ion-content class="tutorial-page">\n\n    <ion-slides pager="true" speed="100">\n  \n      <ion-slide class="slide1">\n        <ion-grid >\n          <ion-row>\n            <ion-col col-1></ion-col>\n            <ion-col col-10>\n              <img src="../../assets/imgs/logo2-branco.png"/>\n            </ion-col>\n            <ion-col col-1></ion-col>\n            <!--<ion-col col-1></ion-col>-->\n            <ion-col col-12>\n              <p style="color: #fff">O doAmor foi pensado para você fazer o bem com apenas alguns cliques.</p>\n            </ion-col>\n            <!--<ion-col col-1></ion-col>-->\n          </ion-row>\n        </ion-grid>\n          <ion-footer>\n          <ion-buttons end>\n            <!--Nomeia a página para redirecionamento ([navPush]="\'create-instit\'") nome dado no HTML da página  -->\n            <button ion-button clear color="light" [navPush]="\'menu-doador\'">Pular</button>\n          </ion-buttons>\n        </ion-footer>\n      </ion-slide>\n    \n      <ion-slide class="slide2">\n        <ion-grid >\n          <ion-row>\n            <ion-col col-1></ion-col>\n            <ion-col col-10>\n              <img src="../../assets/imgs/logo2-branco.png"/>\n            </ion-col>\n            <ion-col col-1></ion-col>\n            <ion-col col-12>\n              <p style="color: #fff">Você transforma uma ou mais vidas com um recurso disponível na palma da sua mão e de fácil acesso. Explore-nos.</p>\n            </ion-col>\n            <ion-col col-12>\n              <button ion-button large clear icon-end color="light" [navPush]="\'menu-doador\'">Entrar <ion-icon color="light" name="arrow-forward" ></ion-icon></button>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-slide>\n    \n    </ion-slides>\n  \n  </ion-content>'/*ion-inline-end:"C:\Users\Usuario\Documents\BRANDON\workspaces\ionic\doamorApp\src\pages\start-doador\start-doador.html"*/,
+            selector: 'page-start-doador',template:/*ion-inline-start:"C:\Users\leticia.abreu.silva\Desktop\master\DoAmorApp\src\pages\start-doador\start-doador.html"*/'<ion-content class="tutorial-page">\n\n    <ion-slides pager="true" speed="100">\n  \n      <ion-slide class="slide1">\n        <ion-grid >\n          <ion-row>\n            <ion-col col-1></ion-col>\n            <ion-col col-10>\n              <img src="../../assets/imgs/logo2-branco.png"/>\n            </ion-col>\n            <ion-col col-1></ion-col>\n            <!--<ion-col col-1></ion-col>-->\n            <ion-col col-12>\n              <p style="color: #fff">O doAmor foi pensado para você fazer o bem com apenas alguns cliques.</p>\n            </ion-col>\n            <!--<ion-col col-1></ion-col>-->\n          </ion-row>\n        </ion-grid>\n          <ion-footer>\n          <ion-buttons end>\n            <!--Nomeia a página para redirecionamento ([navPush]="\'create-instit\'") nome dado no HTML da página  -->\n            <button ion-button clear color="light" [navPush]="\'menu-doador\'">Pular</button>\n          </ion-buttons>\n        </ion-footer>\n      </ion-slide>\n    \n      <ion-slide class="slide2">\n        <ion-grid >\n          <ion-row>\n            <ion-col col-1></ion-col>\n            <ion-col col-10>\n              <img src="../../assets/imgs/logo2-branco.png"/>\n            </ion-col>\n            <ion-col col-1></ion-col>\n            <ion-col col-12>\n              <p style="color: #fff">Você transforma uma ou mais vidas com um recurso disponível na palma da sua mão e de fácil acesso. Explore-nos.</p>\n            </ion-col>\n            <ion-col col-12>\n              <button ion-button large clear icon-end color="light" [navPush]="\'menu-doador\'">Entrar <ion-icon color="light" name="arrow-forward" ></ion-icon></button>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </ion-slide>\n    \n    </ion-slides>\n  \n  </ion-content>'/*ion-inline-end:"C:\Users\leticia.abreu.silva\Desktop\master\DoAmorApp\src\pages\start-doador\start-doador.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], StartDoadorPage);

@@ -61,8 +61,8 @@ export class CreateDoadorPage {
           // Chama o metodo para adicionar campos na tabela
           this.addDados('nomeDoador', this.registerForm.value.name);
           this.addDados('emailDoador', this.registerForm.value.email);
-          this.addDados('dataNascDoador', ' ');
-          this.addDados('sexoDoador', ' ');
+          this.addDados('dataNascDoador', '00/00/0000');
+          this.addDados('sexoDoador', 'N/A');
           // Chama o metodo de pop-up 
           this.presentAlert('Usuário Cadastrado', 'Usuário cadastrado com sucesso!');
           // Redireciona para a pagina nomeada como 'start-page' no start.ts
