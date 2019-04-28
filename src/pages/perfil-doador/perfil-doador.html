@@ -1,10 +1,17 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Perfil</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+
+
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
   <ion-grid>
     <ion-row>
       <ion-col col-1></ion-col>
@@ -21,26 +28,25 @@
     </ion-row>
   </ion-grid>
 
+  <ion-list>
+    <ion-item>
+      <a color="primary">Email</a>
+      <p>{{ emailDoador }}</p>
+    </ion-item>
 
-      <ion-list>
-        <ion-item>
-          <a color="primary">Email</a>
-          <p>{{ emailDoador }}</p>
-        </ion-item>
+    <ion-item>
+      <a color="primary">Data de Nascimento</a>
+      <p>{{ dataNascDoador }}</p>
+    </ion-item>
 
-        <ion-item>
-          <a color="primary">Data de Nascimento</a>
-          <p>{{ dataNascDoador }}</p>
-        </ion-item>
+    <ion-item>
+      <a color="primary">Sexo</a>
+      <p>{{ sexoDoador }}</p>
+    </ion-item>
+  </ion-list>
 
-        <ion-item>
-          <a color="primary">Sexo</a>
-          <p>{{ sexoDoador }}</p>
-        </ion-item>
-      </ion-list>
-
-      <ion-grid>
-          <ion-row>
+  <ion-grid>
+    <ion-row>
       <ion-col col-1></ion-col>
       <ion-col col-10>
         <button ion-button color="light" round full class="btn btn-sign-in" [navPush]="'alter-doador'">Editar</button>

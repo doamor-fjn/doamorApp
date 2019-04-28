@@ -24,6 +24,9 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { MenuDoadorPageModule } from '../pages/menu-doador/menu-doador.module';
 import { MenuDoadorPage } from '../pages/menu-doador/menu-doador';
 import { HomePageModule } from '../pages/home/home.module';
+import { PopoverPerfilPage } from '../pages/popover-perfil/popover-perfil';
+
+
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { HomePageModule } from '../pages/home/home.module';
     ContactPage,
    // HomePage,
     TabsPage,
+    PopoverPerfilPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,7 @@ import { HomePageModule } from '../pages/home/home.module';
     IonicStorageModule.forRoot(),
     // Import MenuDoadorModulo
     MenuDoadorPageModule,
-    HomePageModule
+    HomePageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -51,7 +55,8 @@ import { HomePageModule } from '../pages/home/home.module';
     HomePage,
     TabsPage,
     // Import MenuDoadorPage
-    MenuDoadorPage
+    MenuDoadorPage,
+    PopoverPerfilPage
   ],
   providers: [
     StatusBar,

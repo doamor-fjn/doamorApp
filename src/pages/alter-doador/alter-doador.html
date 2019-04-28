@@ -6,6 +6,7 @@
 
 <ion-content>
   <ion-grid>
+      <form novalidate [formGroup]="updateForm">
     <ion-row>
       <ion-col col-1></ion-col>
       <ion-col col-10 text-center>
@@ -19,7 +20,7 @@
       </ion-col>
       <ion-col col-1></ion-col>
 
-      <form novalidate [formGroup]="updateForm">
+      
         <ion-col col-1></ion-col>
         <ion-col col-10>
           <ion-item class="input-perfil">
@@ -60,13 +61,9 @@
 
 
         <ion-col col-1></ion-col>
-        <ion-col col-5>
-          <button ion-button color="light" round full class="btn btn-sign-in" (click)="alterarDoador()"
+        <ion-col col-10>
+          <button ion-button round full class="btn btn-gradient-primary" (click)="alterarDoador()"
             [navPush]="'perfil-doador'">Salvar</button>
-        </ion-col>
-        <ion-col col-5>
-          <button ion-button color="light" round full class="btn btn-sign-in"
-            [navPush]="'perfil-doador'">Cancelar</button>
         </ion-col>
         <ion-col col-1></ion-col>
 
@@ -76,8 +73,8 @@
               href="">Clique aqui.</a></p>
         </ion-col>
         <ion-col col-1></ion-col>
-      </form>
-    </ion-row>
+      
+    </ion-row></form>
   </ion-grid>
 
 </ion-content>

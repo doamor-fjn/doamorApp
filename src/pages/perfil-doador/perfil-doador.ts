@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, PopoverController,  } from 'ionic-angular';
+
+import { PopoverPerfilPage } from '../popover-perfil/popover-perfil';
+
+
 
 // Imports do IonicStorage
 import { Storage } from '@ionic/storage';
@@ -13,12 +17,17 @@ import { AngularFireDatabase } from '@angular/fire/database';
   name: 'perfil-doador',
 })
 
+
 @Component({
   selector: 'page-perfil-doador',
-  templateUrl: 'perfil-doador.html',
+  templateUrl: 'perfil-doador.html',  
 })
 
 export class PerfilDoadorPage {
+
+  @ViewChild('popoverContent', {read: ElementRef}) content: ElementRef;
+  @ViewChild('popoverText', {read: ElementRef}) text: ElementRef;
+
 
   uid: string;
   dataNascDoador;
@@ -35,6 +44,7 @@ export class PerfilDoadorPage {
     //  Declaração para integração com Firebase 
     public db: AngularFireDatabase,
     public afAuth: AngularFireAuth,
+    private popoverCtrl: PopoverController
   ) {
   }
 
@@ -76,6 +86,17 @@ export class PerfilDoadorPage {
         console.log("Remove failed: " + error.message)
       });
 
+  }
+
+  presentPopover(ev: UIEvent) {
+    let popover = this.popoverCtrl.create(PopoverPerfilPage, {
+      contentEle: this.content.nativeElement,
+      textEle: this.text.nativeElement
+    });
+
+    popover.present({
+      ev: ev
+    });
   }
 
 }

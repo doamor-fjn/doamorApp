@@ -1,25 +1,72 @@
+
 <ion-header>
-    <ion-navbar color="primary">
-      <ion-title>DoAmor</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content padding>
-   
-    <div class="container-buttons">
-      <h3>Olá, {{ nomeDoador }}</h3>
+  <ion-navbar color="primary">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div full class="menu-doador">
+    <img src="../../assets/imgs/logo2-verde.png" alt="">
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1></ion-col>
+      <ion-col col-10 text-center>
+          <h4>Olá, {{ nomeDoador }}. Seja bem-vindo!</h4>
+      </ion-col>
+      <ion-col col-1></ion-col>
+      
+
       <!--Nomeia a página para redirecionamento ([navPush]="'creater-doador'") nome dado no HTML da página  -->
-      <button ion-button block [navPush]="'perfil-doador'">
-          Perfil 
-          <ion-icon name="person"></ion-icon>
+      <!--<button ion-button full block class="btn btn-menu" [navPush]="'perfil-doador'" icon-end>
+      Perfil
+      <ion-icon name="person"></ion-icon>
+    </button>
+    <button ion-button full block class="btn btn-menu" [navPush]="'start-page'" icon-end>
+      Instituições
+      <ion-icon name="home"></ion-icon>
+    </button>
+    <button ion-button full block class="btn btn-menu" [navPush]="'home'" icon-end>
+      Sair
+      <ion-icon name="log-out"></ion-icon>
+    </button>-->
+
+
+
+      <ion-col col-6>
+        <button ion-button full block class="btn btn-menu ios" [navPush]="'perfil-doador'" icon-start>
+          <ion-icon name="person"></ion-icon><br>
+          <p style="font-size: 20px;">Perfil</p>
         </button>
-        <button ion-button block [navPush]="'start-page'">
-          Instituições 
-          <ion-icon name="home"></ion-icon>
+      </ion-col>
+
+      <ion-col col-6>
+        <button ion-button full block class="btn btn-menu" [navPush]="'start-page'" icon-start>
+
+          <ion-icon name="home"></ion-icon><br>
+          <p style="font-size: 20px;">Instituições</p>
         </button>
-        <button ion-button block [navPush]="'home'">
-          Sair 
-          <ion-icon name="log-out"></ion-icon>
+      </ion-col>
+
+      <ion-col col-6>
+        <button ion-button full block class="btn btn-menu" [navPush]="'sobre-page'" icon-start>
+
+          <ion-icon name="ios-information-circle"></ion-icon><br>
+          <p style="font-size: 20px;">Sobre</p>
         </button>
-    </div>
-  </ion-content>
+      </ion-col>
+
+      <ion-col col-6>
+        <button ion-button full block class="btn btn-menu" [navPush]="'home'" icon-start>
+
+          <ion-icon name="log-out"></ion-icon><br>
+          <p style="font-size: 20px;">Sair</p>
+        </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
