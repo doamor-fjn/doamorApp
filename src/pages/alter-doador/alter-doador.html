@@ -1,79 +1,83 @@
 <ion-header>
-    <ion-navbar color="primary">
-      <ion-title>Editar perfil</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content>
-    <ion-grid>
-      <ion-row>
-        <ion-col col-1></ion-col>
-        <ion-col col-10 text-center>
-          <img style="border-radius: 50%;" src="../../assets/imgs/avatar.png" />
-        </ion-col>
-        <ion-col col-1></ion-col>
-  
-        <ion-col col-1></ion-col>
-        <ion-col col-10 text-center>
-          <a href="">Alterar foto do perfil</a>
-        </ion-col>
-        <ion-col col-1></ion-col>
-  
+  <ion-navbar color="primary">
+    <ion-title>Editar perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1></ion-col>
+      <ion-col col-10 text-center>
+        <img style="border-radius: 50%;" src="../../assets/imgs/avatar.png" />
+      </ion-col>
+      <ion-col col-1></ion-col>
+
+      <ion-col col-1></ion-col>
+      <ion-col col-10 text-center>
+        <a href="">Alterar foto do perfil</a>
+      </ion-col>
+      <ion-col col-1></ion-col>
+
+      <form novalidate [formGroup]="updateForm">
         <ion-col col-1></ion-col>
         <ion-col col-10>
           <ion-item class="input-perfil">
             <ion-icon name="ios-person" class="icon-login" item-left></ion-icon>
-            <ion-input type="text" placeholder="Razão Social" value="{{ nomeDoador }}"></ion-input>
-          </ion-item>
-        </ion-col>
-        <ion-col col-1></ion-col>
-  
-        <ion-col col-1></ion-col>
-        <ion-col col-10>
-          <ion-item class="input-perfil">
-            <ion-icon name="ios-mail" class="icon-login" item-left></ion-icon>
-            <ion-input type="text" placeholder="Razão Social" value="{{ emailDoador }}" disabled="{{isDisabled}}">
+            <ion-input type="text" value="{{ nomeDoador }}" placeholder="nome" formControlName="nomeDoadorForm">
             </ion-input>
           </ion-item>
         </ion-col>
         <ion-col col-1></ion-col>
-  
+
+        <ion-col col-1></ion-col>
+        <ion-col col-10>
+          <ion-item class="input-perfil">
+            <ion-icon name="ios-mail" class="icon-login" item-left></ion-icon>
+            <ion-input type="text" placeholder="E-mail" value="{{ emailDoador }}" disabled="{{isDisabled}}">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1></ion-col>
+
         <ion-col col-1></ion-col>
         <ion-col col-10>
           <ion-item class="input-perfil">
             <ion-icon name="ios-calendar" class="icon-login" item-left></ion-icon>
-            <ion-input type="text" placeholder="Razão Social" value="{{ dataNascDoador }}"></ion-input>
+            <ion-input type="text" value="{{ dataNascDoador }}" formControlName="dataNascDoadorForm"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col col-1></ion-col>
-  
+
         <ion-col col-1></ion-col>
         <ion-col col-10>
           <ion-item class="input-perfil">
             <ion-icon name="ios-people" class="icon-login" item-left></ion-icon>
-            <ion-input type="text" placeholder="Razão Social" value="{{ sexoDoador }}"></ion-input>
+            <ion-input type="text" value="{{ sexoDoador }}" formControlName="sexoDoadorForm"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col col-1></ion-col>
-  
-  
+
+
         <ion-col col-1></ion-col>
+        <ion-col col-5>
+          <button ion-button color="light" round full class="btn btn-sign-in" (click)="alterarDoador()"
+            [navPush]="'perfil-doador'">Salvar</button>
+        </ion-col>
         <ion-col col-5>
           <button ion-button color="light" round full class="btn btn-sign-in"
             [navPush]="'perfil-doador'">Cancelar</button>
         </ion-col>
-        <ion-col col-5>
-          <button ion-button round full class="btn btn-gradient-secundary" (click)="alterarDoador()"
-            [navPush]="'menu-doador'">Salvar</button>
-        </ion-col>
         <ion-col col-1></ion-col>
-  
+
         <ion-col col-1></ion-col>
         <ion-col col-10 text-center>
-          <p style="font-size: 10px;">Deseja excluir sua conta? <a color="primary" (click)="removeDoador()" href="">Clique aqui.</a></p>
+          <p style="font-size: 10px;">Deseja excluir sua conta? <a color="primary" (click)="removeDoador()"
+              href="">Clique aqui.</a></p>
         </ion-col>
         <ion-col col-1></ion-col>
-      </ion-row>
-    </ion-grid>
-  
-  </ion-content>
+      </form>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
