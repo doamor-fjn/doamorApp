@@ -14,7 +14,7 @@ A aplicação estará disponível nas plataformas Android e iOS. Desenvolvida na
 - Brandon Fontes
 - Douglas Silva
 - Kamilla Melo
-- Letícia Areu
+- Letícia Abreu
 - Thiago Moreira
 - Victor Hugo
 
@@ -32,3 +32,4 @@ A aplicação estará disponível nas plataformas Android e iOS. Desenvolvida na
 - [ ] Mapa de Instituições / *Map of Institutions*
 - [ ] Lista de Instituições / *List of Institutions*
 - [ ] Instituição / *Institution*
+- [x] Sobre / *About*
