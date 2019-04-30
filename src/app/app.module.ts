@@ -26,6 +26,10 @@ import { MenuDoadorPage } from '../pages/menu-doador/menu-doador';
 import { HomePageModule } from '../pages/home/home.module';
 import { PopoverPerfilPage } from '../pages/popover-perfil/popover-perfil';
 
+// Imports do BrMasker - Mascara no input
+//import { BrMaskerModule } from 'br-mask';
+//import { NgxMaskIonicModule } from 'ngx-mask-ionic';
+//import { BrMaskerModule } from 'brmasker-ionic-3';
 
 
 @NgModule({
@@ -46,6 +50,9 @@ import { PopoverPerfilPage } from '../pages/popover-perfil/popover-perfil';
     // Import MenuDoadorModulo
     MenuDoadorPageModule,
     HomePageModule,
+    // Imports do BrMasker - Mascara no input
+    //BrMaskerModule,
+    //NgxMaskIonicModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

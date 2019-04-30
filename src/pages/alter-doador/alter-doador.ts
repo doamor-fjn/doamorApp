@@ -9,6 +9,7 @@ import { Storage } from '@ionic/storage';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
 
+
 @IonicPage(
   { name: 'alter-doador' }
 )
@@ -37,7 +38,7 @@ export class AlterDoadorPage {
     //  Declaração para Pop-up de Alertas 
     public alertCtrl: AlertController,
     //  Criação da validação de obrigatoriedade do formulario de cadastro 
-    public formbuild: FormBuilder
+    public formbuild: FormBuilder,
   ) {
     this.updateForm = this.formbuild.group({
       nomeDoadorForm: [null, [Validators.required, Validators.minLength(5)]],
@@ -130,6 +131,4 @@ export class AlterDoadorPage {
     });
     
   }
-
 }
-

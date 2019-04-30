@@ -39,6 +39,8 @@ export class MenuDoadorPage {
         this.uid = resolve;
         this.getList();
       })
+
+      //this.nomeDoador = "teste";
   }
 
   // Metodo para buscar da base apartir da chave do usuário
@@ -54,7 +56,8 @@ export class MenuDoadorPage {
         this.nomeDoador = items.nomeDoador;
       }
     })
-
-
   }
+
+
+  
 }

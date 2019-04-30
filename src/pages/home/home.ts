@@ -9,6 +9,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 // Imports do IonicStorage
 import { Storage } from '@ionic/storage';
 
+
+
 // Nomeia a página para redirecionamento
 @IonicPage({
   name: 'home'
@@ -56,6 +58,7 @@ export class HomePage {
             this.navCtrl.setRoot('menu-doador');
           })
       })
+      
       //  Quando for erro
       .catch((error) => {
         switch (error.code) {
@@ -89,6 +92,7 @@ export class HomePage {
         }
       })
   }
+
 
   // Metodo para pop-up
   presentAlert(title: string, subtitle: string) {

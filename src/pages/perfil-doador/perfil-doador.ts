@@ -89,11 +89,7 @@ export class PerfilDoadorPage {
   }
 
   presentPopover(ev: UIEvent) {
-    let popover = this.popoverCtrl.create(PopoverPerfilPage, {
-      contentEle: this.content.nativeElement,
-      textEle: this.text.nativeElement
-    });
-
+    let popover = this.popoverCtrl.create(PopoverPerfilPage);
     popover.present({
       ev: ev
     });
