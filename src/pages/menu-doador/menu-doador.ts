@@ -58,6 +58,11 @@ export class MenuDoadorPage {
     })
   }
 
+  logout() {
+    this.storage.remove('codUser');
+    this.navCtrl.setRoot('home');
+  }
+
 
   
 }

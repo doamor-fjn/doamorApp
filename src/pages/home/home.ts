@@ -8,8 +8,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 // Imports do IonicStorage
 import { Storage } from '@ionic/storage';
-
-
+import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/output_ast';
 
 // Nomeia a página para redirecionamento
 @IonicPage({
@@ -40,9 +39,9 @@ export class HomePage {
       email: [null, [Validators.required, Validators.email]],
       password: [null, [Validators.required, Validators.minLength(2)]]
     })
-
+    
   }
-
+ 
   // Metodo para submeter os dados de Email e senha
   submitLogin() {
     //  Passagem de parametros
@@ -58,6 +57,8 @@ export class HomePage {
             this.navCtrl.setRoot('menu-doador');
           })
       })
+
+      
       
       //  Quando for erro
       .catch((error) => {
@@ -92,6 +93,27 @@ export class HomePage {
         }
       })
   }
+
+
+    // Metodo para capturar o codigo do chave do usuário
+    
+    ionViewDidLoad() {
+      //this.storage.get('codUser')
+        //.then((resolve) => {
+          //this.uid = resolve;
+          //this.navCtrl.setRoot('menu-doador');
+          //this.storage.set('Teste', 'teste')
+          this.storage.get('codUser').then((validador) => {
+            if(validador){
+              this.navCtrl.setRoot('menu-doador');
+            }else{
+              
+            }
+
+          }).catch((error)=> {
+            console.log("Erro");
+          });
+    }
 
 
   // Metodo para pop-up
