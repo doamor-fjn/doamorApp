@@ -95,5 +95,10 @@ export class PerfilDoadorPage {
     });
   }
 
+  logout() {
+    this.storage.remove('codUser');
+    this.navCtrl.setRoot('home');
+  }
+
 }
 
