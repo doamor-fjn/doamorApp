@@ -63,6 +63,10 @@ export class CreateInstitPage {
           this.addDados('razaoSocialInst', this.registerForm.value.razaoSocial);
           this.addDados('cnpjInst', this.registerForm.value.cnpj);
           this.addDados('emailInst', this.registerForm.value.email);
+          this.addDadosD('emailInst', this.registerForm.value.email); // Inserir no banco doador
+          this.addDadosD('flag', 'I'); // Inserir no banco doador
+          this.addDadosD('dataNascDoador', '00/00/0000'); // Inserir no banco doador
+          this.addDadosD('sexoDoador', 'N/A'); // Inserir no banco doador
           this.addDados('cepInstit', ' ');
           this.addDados('logrdInstit', ' ');
           this.addDados('logrNroInstit', ' ');
@@ -106,6 +110,12 @@ export class CreateInstitPage {
   addDados(nomeCampo: string, valorCampo: string) {
     var usuarioLogado = this.afAuth.auth.currentUser;
     var userDB = this.db.database.ref('/DadosInstituicao').child(usuarioLogado.uid);
+    userDB.child(nomeCampo).set(valorCampo);
+  }
+
+  addDadosD(nomeCampo: string, valorCampo: string) {
+    var usuarioLogado = this.afAuth.auth.currentUser;
+    var userDB = this.db.database.ref('/DadosDoadores').child(usuarioLogado.uid);
     userDB.child(nomeCampo).set(valorCampo);
   }
 }

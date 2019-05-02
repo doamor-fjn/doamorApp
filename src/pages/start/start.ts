@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, PopoverController, } from 'ionic-angular';
+
+// Import do Menu Popover
+import { PopoverPerfilPage } from '../popover-perfil/popover-perfil';
 
 // Imports do IonicStorage
 import { Storage } from '@ionic/storage';
@@ -21,6 +24,10 @@ export class StartPage {
   uid: string;
   task;
   listTask;
+  searchQuery: string = '';
+  items: string[];
+
+
 
   constructor(
     public navCtrl: NavController,
@@ -30,6 +37,8 @@ export class StartPage {
     //  Declaração para integração com Firebase 
     public db: AngularFireDatabase,
     public afAuth: AngularFireAuth,
+    // Declaração para o Menu Popover
+    private popoverCtrl: PopoverController
 
   ) {
   }
@@ -39,7 +48,7 @@ export class StartPage {
     this.storage.get('codUser')
       .then((resolve) => {
         this.uid = resolve;
-        this.getList();
+        this.getAll();
       })
   }
 
@@ -63,6 +72,25 @@ export class StartPage {
     })
 
   }
+
+  getAll() {
+    let listDB = this.db.database.ref('/DadosInstituicao');
+    // Tira uma foto do banco no momento atual
+    listDB.on('value', (snapshot) =>  {
+      const items = snapshot.val();
+      if(items) {
+        this.listTask = Object.keys(items).map(i => items[i])
+      }
+    })
+    }
+
+  presentPopover(ev: UIEvent) {
+    let popover = this.popoverCtrl.create(PopoverPerfilPage);
+    popover.present({
+      ev: ev
+    });
+  }
+
 
 }
 

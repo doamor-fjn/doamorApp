@@ -8,7 +8,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 // Imports do IonicStorage
 import { Storage } from '@ionic/storage';
-import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/output_ast';
 
 // Nomeia a página para redirecionamento
 @IonicPage({

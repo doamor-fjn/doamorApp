@@ -3,8 +3,6 @@ import { IonicPage, NavController, NavParams, PopoverController,  } from 'ionic-
 
 import { PopoverPerfilPage } from '../popover-perfil/popover-perfil';
 
-
-
 // Imports do IonicStorage
 import { Storage } from '@ionic/storage';
 
@@ -44,6 +42,7 @@ export class PerfilDoadorPage {
     //  Declaração para integração com Firebase 
     public db: AngularFireDatabase,
     public afAuth: AngularFireAuth,
+    // Declaração para o Menu Popover
     private popoverCtrl: PopoverController
   ) {
   }
