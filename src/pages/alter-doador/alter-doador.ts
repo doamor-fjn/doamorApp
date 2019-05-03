@@ -21,11 +21,10 @@ export class AlterDoadorPage {
 
   uid: string;
   updateForm: FormGroup;
-  dataNascDoador;
+  dataNascDoador : Date;
   emailDoador;
   nomeDoador;
   sexoDoador;
-  nomeDoadorList;
 
   constructor(
     public navCtrl: NavController,

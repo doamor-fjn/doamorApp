@@ -1,4 +1,4 @@
-
+﻿
 # project doAmor
 ## Escopo/Scope
 A proposta do DoAmor é realizar a intermediação entre o doador e o local receptivo de donativos, facilitando a localização digital e dando maior visibilidade as instituições receptoras.
@@ -30,6 +30,6 @@ A aplicação estará disponível nas plataformas Android e iOS. Desenvolvida na
 - [ ] Editar Perfil Instituição / *Edit Profile Institution*
 - [x] Editar Perfil Doador / *Edit Profile Donor*
 - [ ] Mapa de Instituições / *Map of Institutions*
-- [ ] Lista de Instituições / *List of Institutions*
+- [x] Lista de Instituições / *List of Institutions*
 - [ ] Instituição / *Institution*
 - [x] Sobre / *About*

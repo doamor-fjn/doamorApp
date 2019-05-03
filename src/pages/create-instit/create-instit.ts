@@ -67,6 +67,7 @@ export class CreateInstitPage {
           this.addDadosD('flag', 'I'); // Inserir no banco doador
           this.addDadosD('dataNascDoador', '00/00/0000'); // Inserir no banco doador
           this.addDadosD('sexoDoador', 'N/A'); // Inserir no banco doador
+          this.addDadosD('nomeDoador', this.registerForm.value.razaoSocial); // Inserir no banco doador
           this.addDados('cepInstit', ' ');
           this.addDados('logrdInstit', ' ');
           this.addDados('logrNroInstit', ' ');

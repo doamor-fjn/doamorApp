@@ -28,11 +28,12 @@ export class PerfilDoadorPage {
 
 
   uid: string;
-  dataNascDoador;
+  dataNascDoador: Date;
   emailDoador;
   nomeDoador;
   sexoDoador;
   nomeDoadorList;
+
 
   constructor(
     public navCtrl: NavController,

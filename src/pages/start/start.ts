@@ -18,6 +18,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 @Component({
   selector: 'page-start',
   templateUrl: 'start.html',
+  
 })
 export class StartPage {
 
@@ -26,6 +27,7 @@ export class StartPage {
   listTask;
   searchQuery: string = '';
   items: string[];
+
 
 
 
@@ -38,8 +40,7 @@ export class StartPage {
     public db: AngularFireDatabase,
     public afAuth: AngularFireAuth,
     // Declaração para o Menu Popover
-    private popoverCtrl: PopoverController
-
+    private popoverCtrl: PopoverController,
   ) {
   }
 
@@ -90,6 +91,8 @@ export class StartPage {
       ev: ev
     });
   }
+
+
 
 
 }

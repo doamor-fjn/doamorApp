@@ -16,14 +16,30 @@
 
 
 
-  <ion-list>
+  <!--<ion-list>
     <ion-item *ngFor="let item of listTask">
       <h2>{{ item.razaoSocialInst }}</h2>
       <h3>{{ item.descInstit }}</h3>
       <p>{{ item.logrdInstit }} , {{ item.logrNroInstit }}</p>
     </ion-item>
-  </ion-list>
-<!--
+  </ion-list>-->
+
+  <ion-card *ngFor="let item of listTask">
+    <!--<img src="img/nin-live.png" />-->
+    <ion-card-content>
+      <ion-card-title color="primary">
+        {{ item.razaoSocialInst }}
+      </ion-card-title>
+      <p>{{ item.descInstit }}</p>
+      <p><b>Endereço: </b>{{ item.logrdInstit }} , {{ item.logrNroInstit }}</p>
+      <a ion-item >
+        Visualizar instituição
+      </a>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!--
   <ion-item>
     <ion-input type="text" placeholder="Digite sua Tarefa" [(ngModel)]="task"></ion-input>
   </ion-item>

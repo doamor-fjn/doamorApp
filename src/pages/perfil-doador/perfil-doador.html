@@ -31,16 +31,18 @@
   <ion-list>
     <ion-item>
       <a color="primary">Email</a>
+      <!--<ion-icon name="ios-mail" class="icon-login" item-left></ion-icon>-->
       <p>{{ emailDoador }}</p>
     </ion-item>
-
     <ion-item>
       <a color="primary">Data de Nascimento</a>
-      <p>{{ dataNascDoador }}</p>
+      <!--<ion-icon name="ios-calendar" class="icon-login" item-left></ion-icon>-->
+      <p>{{ dataNascDoador | date:'dd/MM/yyyy' }}</p>
     </ion-item>
-
+    
     <ion-item>
       <a color="primary">Sexo</a>
+      <!--<ion-icon name="ios-people" class="icon-login" item-left></ion-icon>-->
       <p>{{ sexoDoador }}</p>
     </ion-item>
   </ion-list>

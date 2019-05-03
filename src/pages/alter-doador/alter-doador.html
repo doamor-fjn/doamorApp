@@ -45,7 +45,7 @@
         <ion-col col-10>
           <ion-item class="input-perfil">
             <ion-icon name="ios-calendar" class="icon-login" item-left></ion-icon>
-            <ion-input type="text" value="{{ dataNascDoador }}" formControlName="dataNascDoadorForm" ></ion-input>
+            <ion-datetime displayFormat="DD/MM/YYYY" placeholder="Data de Nascimento" [(ngModel)]="dataNascDoador"  formControlName="dataNascDoadorForm" ></ion-datetime>
           </ion-item>
         </ion-col>
         <ion-col col-1></ion-col>
@@ -54,7 +54,7 @@
         <ion-col col-10>
           <ion-item class="input-perfil">
             <ion-icon name="ios-people" class="icon-login" item-left></ion-icon>
-            <ion-input type="text" value="{{ sexoDoador }}" formControlName="sexoDoadorForm"></ion-input>
+            <ion-input type="text" value="{{ sexoDoador }}" placeholder="Sexo" formControlName="sexoDoadorForm"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col col-1></ion-col>
