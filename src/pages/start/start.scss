@@ -2,4 +2,20 @@ page-start {
     .button-add{
         margin-top: 30px;
     }
+
+    .listaCategorias {
+        overflow: auto;
+        display: flex;
+        color: #000;
+        padding: 0!important;
+      }
+      ion-chip {
+          margin: 5px !important;
+          color: white !important;
+          font-weight: bold !important;
+          .button {
+              color: rgba(56, 245, 239, 0.74);
+          }
+      }  
+      
 }

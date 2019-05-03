@@ -10,10 +10,27 @@
   </ion-navbar>
   <ion-searchbar class="barraPesquisa" placeholder="Procurar instituição" (ionInput)="getItems($event)">
   </ion-searchbar>
+
 </ion-header>
 
-<ion-content>
 
+
+
+
+<ion-content>
+    
+  <div padding class="listaCategorias">
+      
+      <ion-chip><ion-label color="dark">Alimentos </ion-label></ion-chip>
+      <ion-chip><ion-label color="dark">Material de Construção </ion-label></ion-chip>
+      <ion-chip><ion-label color="dark">Eletrônicos </ion-label></ion-chip>
+      <ion-chip><ion-label color="dark">Roupas </ion-label></ion-chip>
+      <ion-chip><ion-label color="dark">Instrumentos Músicais </ion-label></ion-chip>
+      <ion-chip><ion-label color="dark">Brinquedos </ion-label></ion-chip>
+      <ion-chip><ion-label color="dark">Higiene Pessoal </ion-label></ion-chip>
+      <ion-chip><ion-label color="dark">Material Escolar </ion-label></ion-chip>
+      
+  </div>
 
 
   <!--<ion-list>
@@ -32,7 +49,7 @@
       </ion-card-title>
       <p>{{ item.descInstit }}</p>
       <p><b>Endereço: </b>{{ item.logrdInstit }} , {{ item.logrNroInstit }}</p>
-      <a ion-item >
+      <a ion-item>
         Visualizar instituição
       </a>
     </ion-card-content>
