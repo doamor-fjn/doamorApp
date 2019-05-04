@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+// Import Pages
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { PerfilDoadorPage } from '../pages/perfil-doador/perfil-doador';
+import { StartPage } from '../pages/start/start';
+import { SobrePage } from '../pages/sobre/sobre';
+import { PopoverPerfilPage } from '../pages/popover-perfil/popover-perfil';
+import { MenuDoadorPage } from '../pages/menu-doador/menu-doador';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,18 +28,20 @@ import { IonicStorageModule } from '@ionic/storage';
 // Imports do Firebase
 import { AngularFireDatabase } from '@angular/fire/database';
 import { MenuDoadorPageModule } from '../pages/menu-doador/menu-doador.module';
-import { MenuDoadorPage } from '../pages/menu-doador/menu-doador';
 import { HomePageModule } from '../pages/home/home.module';
-import { PopoverPerfilPage } from '../pages/popover-perfil/popover-perfil';
+import { PerfilDoadorPageModule } from './../pages/perfil-doador/perfil-doador.module';
 
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
-   // HomePage,
+    //HomePage,
     TabsPage,
-    PopoverPerfilPage
+    PopoverPerfilPage,
+    //PerfilDoadorPage,
+    StartPage,
+    SobrePage
   ],
   imports: [
     BrowserModule,
@@ -44,6 +52,7 @@ import { PopoverPerfilPage } from '../pages/popover-perfil/popover-perfil';
     // Import MenuDoadorModulo
     MenuDoadorPageModule,
     HomePageModule,
+    PerfilDoadorPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,7 +63,10 @@ import { PopoverPerfilPage } from '../pages/popover-perfil/popover-perfil';
     TabsPage,
     // Import MenuDoadorPage
     MenuDoadorPage,
-    PopoverPerfilPage
+    PopoverPerfilPage,
+    PerfilDoadorPage,
+    StartPage,
+    SobrePage
   ],
   providers: [
     StatusBar,

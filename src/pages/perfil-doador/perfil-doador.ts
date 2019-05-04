@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, PopoverController,  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, PopoverController, ViewController,  } from 'ionic-angular';
 
 import { PopoverPerfilPage } from '../popover-perfil/popover-perfil';
 
@@ -14,7 +14,6 @@ import { AngularFireDatabase } from '@angular/fire/database';
 @IonicPage({
   name: 'perfil-doador',
 })
-
 
 @Component({
   selector: 'page-perfil-doador',
@@ -44,7 +43,8 @@ export class PerfilDoadorPage {
     public db: AngularFireDatabase,
     public afAuth: AngularFireAuth,
     // Declaração para o Menu Popover
-    private popoverCtrl: PopoverController
+    private popoverCtrl: PopoverController,
+    public viewCtrl: ViewController,
   ) {
   }
 
@@ -72,22 +72,6 @@ export class PerfilDoadorPage {
 
   }
 
-  // Metodo para remover chave do usuário
-  removeDoador() {
-    this.navCtrl.setRoot('menu-doador');
-    var nomeTab = this.db.database.ref('DadosDoadores');
-    var removeClna = nomeTab.child(this.uid);
-    // Tira uma foto do banco no momento atual
-    this.db.object(removeClna).remove()
-      .then(function () {
-        console.log("Remove succeeded.")
-      })
-      .catch(function (error) {
-        console.log("Remove failed: " + error.message)
-      });
-
-  }
-
   presentPopover(ev: UIEvent) {
     let popover = this.popoverCtrl.create(PopoverPerfilPage);
     popover.present({
@@ -98,6 +82,10 @@ export class PerfilDoadorPage {
   logout() {
     this.storage.remove('codUser');
     this.navCtrl.setRoot('home');
+  }
+
+  close() {
+    this.viewCtrl.dismiss();
   }
 
 }

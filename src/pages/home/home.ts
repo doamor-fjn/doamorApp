@@ -96,23 +96,7 @@ export class HomePage {
 
     // Metodo para capturar o codigo do chave do usuário
     
-    ionViewDidLoad() {
-      //this.storage.get('codUser')
-        //.then((resolve) => {
-          //this.uid = resolve;
-          //this.navCtrl.setRoot('menu-doador');
-          //this.storage.set('Teste', 'teste')
-          this.storage.get('codUser').then((validador) => {
-            if(validador){
-              this.navCtrl.setRoot('menu-doador');
-            }else{
-              
-            }
-
-          }).catch((error)=> {
-            console.log("Erro");
-          });
-    }
+    
 
 
   // Metodo para pop-up

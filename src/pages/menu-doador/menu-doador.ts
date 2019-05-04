@@ -21,6 +21,7 @@ export class MenuDoadorPage {
   nomeDoador;
   nomeDoadorList;
 
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -29,6 +30,7 @@ export class MenuDoadorPage {
     //  Declaração para integração com Firebase 
     public db: AngularFireDatabase,
     public afAuth: AngularFireAuth,
+    
   ) {
   }
 

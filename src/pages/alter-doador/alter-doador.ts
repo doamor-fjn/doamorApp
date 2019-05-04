@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, ViewController } from 'ionic-angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 // Imports do IonicStorage
@@ -21,7 +21,7 @@ export class AlterDoadorPage {
 
   uid: string;
   updateForm: FormGroup;
-  dataNascDoador : Date;
+  dataNascDoador: Date;
   emailDoador;
   nomeDoador;
   sexoDoador;
@@ -38,6 +38,7 @@ export class AlterDoadorPage {
     public alertCtrl: AlertController,
     //  Criação da validação de obrigatoriedade do formulario de cadastro 
     public formbuild: FormBuilder,
+    public viewCtrl: ViewController,
   ) {
     this.updateForm = this.formbuild.group({
       nomeDoadorForm: [null, [Validators.required, Validators.minLength(5)]],
@@ -94,9 +95,12 @@ export class AlterDoadorPage {
       this.updDados('sexoDoador', this.updateForm.value.sexoDoadorForm);
     }
     // Chama o metodo de pop-up 
-    this.presentAlert('Usuário Alterado', 'Alterações realizadas com sucesso!');
+
+    this.presentAlert('Perfil Atualizado', 'Alterações realizadas com sucesso!');
+    //this.navCtrl.setRoot('perfil-doador');
+    this.viewCtrl.dismiss();
   }
-  
+
   // Metodo para pop-up
   presentAlert(title: string, subtitle: string) {
     let alert = this.alertCtrl.create({
@@ -106,16 +110,17 @@ export class AlterDoadorPage {
     });
     alert.present();
   }
-  
+
   // Metodo para salvar informação apartir da chave do usuário
   updDados(nomeCampo: string, valorCampo: string) {
     var usuarioLogado = this.afAuth.auth.currentUser;
     var userDB = this.db.database.ref('/DadosDoadores').child(usuarioLogado.uid);
     userDB.child(nomeCampo).set(valorCampo);
   }
-  
+
   // Metodo para remover chave do usuário
   removeDoador() {
+    
     var nomeTab = this.db.database.ref('DadosDoadores');
     var removeClna = nomeTab.child(this.uid);
     // Tira uma foto do banco no momento atual
@@ -123,11 +128,12 @@ export class AlterDoadorPage {
     .then(function () {
       console.log("Remove succeeded.")
       // Chama o metodo de pop-up 
-      this.presentAlert('Usuário Alterado', 'Alterações realizadas com sucesso!');
+      this.presentAlert('Perfil Atualizado', 'Alterações realizadas com sucesso!');
     })
     .catch(function (error) {
       console.log("Remove failed: " + error.message)
     });
-    
+
+
   }
 }

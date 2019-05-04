@@ -1,12 +1,10 @@
 <ion-header>
-  <ion-navbar color="primary">
+  <ion-navbar hideBackButton color="primary">
     <ion-title>Perfil</ion-title>
     <ion-buttons end>
       <button ion-button icon-only color="light" (click)="presentPopover($event)">
         <ion-icon name="more"></ion-icon>
       </button>
-
-
     </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -39,7 +37,7 @@
       <!--<ion-icon name="ios-calendar" class="icon-login" item-left></ion-icon>-->
       <p>{{ dataNascDoador | date:'dd/MM/yyyy' }}</p>
     </ion-item>
-    
+
     <ion-item>
       <a color="primary">Sexo</a>
       <!--<ion-icon name="ios-people" class="icon-login" item-left></ion-icon>-->

@@ -6,21 +6,21 @@
 
 <ion-content>
   <ion-grid>
-      <form novalidate [formGroup]="updateForm">
-    <ion-row>
-      <ion-col col-1></ion-col>
-      <ion-col col-10 text-center>
-        <img style="border-radius: 50%;" src="../../assets/imgs/avatar.png" />
-      </ion-col>
-      <ion-col col-1></ion-col>
+    <form novalidate [formGroup]="updateForm">
+      <ion-row>
+        <ion-col col-1></ion-col>
+        <ion-col col-10 text-center>
+          <img style="border-radius: 50%;" src="../../assets/imgs/avatar.png" />
+        </ion-col>
+        <ion-col col-1></ion-col>
 
-      <ion-col col-1></ion-col>
-      <ion-col col-10 text-center>
-        <a href="">Alterar foto do perfil</a>
-      </ion-col>
-      <ion-col col-1></ion-col>
+        <ion-col col-1></ion-col>
+        <ion-col col-10 text-center>
+          <a href="">Alterar foto do perfil</a>
+        </ion-col>
+        <ion-col col-1></ion-col>
 
-      
+
         <ion-col col-1></ion-col>
         <ion-col col-10>
           <ion-item class="input-perfil">
@@ -45,7 +45,8 @@
         <ion-col col-10>
           <ion-item class="input-perfil">
             <ion-icon name="ios-calendar" class="icon-login" item-left></ion-icon>
-            <ion-datetime displayFormat="DD/MM/YYYY" placeholder="Data de Nascimento" [(ngModel)]="dataNascDoador"  formControlName="dataNascDoadorForm" ></ion-datetime>
+            <ion-datetime displayFormat="DD/MM/YYYY" placeholder="Data de Nascimento" [(ngModel)]="dataNascDoador"
+              formControlName="dataNascDoadorForm"></ion-datetime>
           </ion-item>
         </ion-col>
         <ion-col col-1></ion-col>
@@ -54,7 +55,8 @@
         <ion-col col-10>
           <ion-item class="input-perfil">
             <ion-icon name="ios-people" class="icon-login" item-left></ion-icon>
-            <ion-input type="text" value="{{ sexoDoador }}" placeholder="Sexo" formControlName="sexoDoadorForm"></ion-input>
+            <ion-input type="text" value="{{ sexoDoador }}" placeholder="Sexo" formControlName="sexoDoadorForm">
+            </ion-input>
           </ion-item>
         </ion-col>
         <ion-col col-1></ion-col>
@@ -63,18 +65,19 @@
         <ion-col col-1></ion-col>
         <ion-col col-10>
           <button ion-button round full class="btn btn-gradient-primary" (click)="alterarDoador()"
-            [navPush]="'perfil-doador'">Salvar</button>
+            >Salvar</button>
         </ion-col>
         <ion-col col-1></ion-col>
 
         <ion-col col-1></ion-col>
         <ion-col col-10 text-center>
-          <p style="font-size: 10px;">Deseja excluir sua conta? <a color="primary" (click)="removeDoador()"
+          <p>Deseja excluir sua conta? <a color="primary" (click)="removeDoador()"
               href="">Clique aqui.</a></p>
         </ion-col>
         <ion-col col-1></ion-col>
-      
-    </ion-row></form>
+
+      </ion-row>
+    </form>
   </ion-grid>
 
 </ion-content>
