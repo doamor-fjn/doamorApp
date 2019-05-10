@@ -58,11 +58,14 @@ export class CreateDoadorPage {
         this.registerForm.value.password)
         //  Quando for sucesso, colocar mensagem "Cadastro realizado com Sucesso"
         .then((response) => {
-          // Chama o metodo para adicionar campos na tabela
-          this.addDados('nomeDoador', this.registerForm.value.name);
-          this.addDados('emailDoador', this.registerForm.value.email);
-          this.addDados('dataNascDoador', '00/00/0000');
-          this.addDados('sexoDoador', 'N/A');
+          // Chama o metodo para adicionar campos na tabela de Validação de Usuário
+          this.addDadosLogin('emailUsuario', this.registerForm.value.email);
+          this.addDadosLogin('tipoUsuario', 'D');
+          // Chama o metodo para adicionar campos na tabela de Doador
+          this.addDadosDoador('nomeDoador', this.registerForm.value.name);
+          this.addDadosDoador('emailDoador', this.registerForm.value.email);
+          this.addDadosDoador('dataNascDoador', '01/01/0001');
+          this.addDadosDoador('sexoDoador', 'N/A');
           // Chama o metodo de pop-up 
           this.presentAlert('Usuário Cadastrado', 'Usuário cadastrado com sucesso!');
           // Redireciona para a pagina nomeada como 'start-page' no start.ts
@@ -94,11 +97,17 @@ export class CreateDoadorPage {
     });
     alert.present();
   }
-
+  
   // Metodo para salvar informação apartir da chave do usuário
-  addDados(nomeCampo: string, valorCampo: string) {
+  addDadosDoador(nomeCampo: string, valorCampo: string) {
     var usuarioLogado = this.afAuth.auth.currentUser;
     var userDB = this.db.database.ref('/DadosDoadores').child(usuarioLogado.uid);
+    userDB.child(nomeCampo).set(valorCampo);
+  }
+  // Metodo para salvar informação apartir da chave do usuário
+  addDadosLogin(nomeCampo: string, valorCampo: string) {
+    var usuarioLogado = this.afAuth.auth.currentUser;
+    var userDB = this.db.database.ref('/DadosLogin').child(usuarioLogado.uid);
     userDB.child(nomeCampo).set(valorCampo);
   }
 }

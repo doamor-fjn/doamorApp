@@ -51,35 +51,33 @@ export class CreateInstitPage {
     })
   }
 
-    // Metodo para submeter os dados de Email e senha
-    submitForm() {
-      //  Passagem de parametros
-      this.afAuth.auth.createUserWithEmailAndPassword(
-        this.registerForm.value.email,
-        this.registerForm.value.password)
-        //  Quando for sucesso, colocar mensagem "Cadastro realizado com Sucesso"
-        .then((response) => {
-          // Chama o metodo para adicionar campos na tabela
-          this.addDados('razaoSocialInst', this.registerForm.value.razaoSocial);
-          this.addDados('cnpjInst', this.registerForm.value.cnpj);
-          this.addDados('emailInst', this.registerForm.value.email);
-          this.addDadosD('emailInst', this.registerForm.value.email); // Inserir no banco doador
-          this.addDadosD('flag', 'I'); // Inserir no banco doador
-          this.addDadosD('dataNascDoador', '00/00/0000'); // Inserir no banco doador
-          this.addDadosD('sexoDoador', 'N/A'); // Inserir no banco doador
-          this.addDadosD('nomeDoador', this.registerForm.value.razaoSocial); // Inserir no banco doador
-          this.addDados('cepInstit', ' ');
-          this.addDados('logrdInstit', ' ');
-          this.addDados('logrNroInstit', ' ');
-          this.addDados('imgInstit', ' ');
-          this.addDados('descInstit', ' ');
-          this.addDados('locGeogfInstit', ' ');
-          this.addDados('respInstit', ' ');
-          // Chama o metodo de pop-up 
-          this.presentAlert('Cadastro solicitado com Sucesso', 'Estamos analisando sua solicitação, aguarde o e-mail de confirmação ');
-          // Redireciona para a pagina nomeada como 'start-page' no start.ts
-          this.navCtrl.setRoot('menu-instit-item');
-        })
+  // Metodo para submeter os dados de Email e senha
+  submitForm() {
+    //  Passagem de parametros
+    this.afAuth.auth.createUserWithEmailAndPassword(
+      this.registerForm.value.email,
+      this.registerForm.value.password)
+      //  Quando for sucesso, colocar mensagem "Cadastro realizado com Sucesso"
+      .then((response) => {
+        // Chama o metodo para adicionar campos na tabela de Validação de Usuário
+        this.addDadosLogin('emailUsuario', this.registerForm.value.email);
+        this.addDadosLogin('tipoUsuario', 'I');
+        // Chama o metodo para adicionar campos na tabela
+        this.addDadosInst('razaoSocialInst', this.registerForm.value.razaoSocial);
+        this.addDadosInst('cnpjInst', this.registerForm.value.cnpj);
+        this.addDadosInst('emailInst', this.registerForm.value.email);
+        this.addDadosInst('cepInstit', ' ');
+        this.addDadosInst('logrdInstit', ' ');
+        this.addDadosInst('logrNroInstit', ' ');
+        this.addDadosInst('imgInstit', ' ');
+        this.addDadosInst('descInstit', ' ');
+        this.addDadosInst('locGeogfInstit', ' ');
+        this.addDadosInst('respInstit', ' ');
+        // Chama o metodo de pop-up 
+        this.presentAlert('Cadastro solicitado com Sucesso', 'Estamos analisando sua solicitação, aguarde o e-mail de confirmação ');
+        // Redireciona para a pagina nomeada como 'start-page' no start.ts
+        this.navCtrl.setRoot('menu-instit-item');
+      })
       //  Quando for erro
       .catch((error) => {
         switch (error.code) {
@@ -108,15 +106,16 @@ export class CreateInstitPage {
   }
 
   // Metodo para salvar informação apartir da chave do usuário
-  addDados(nomeCampo: string, valorCampo: string) {
+  addDadosInst(nomeCampo: string, valorCampo: string) {
     var usuarioLogado = this.afAuth.auth.currentUser;
     var userDB = this.db.database.ref('/DadosInstituicao').child(usuarioLogado.uid);
     userDB.child(nomeCampo).set(valorCampo);
   }
 
-  addDadosD(nomeCampo: string, valorCampo: string) {
+  // Metodo para salvar informação apartir da chave do usuário
+  addDadosLogin(nomeCampo: string, valorCampo: string) {
     var usuarioLogado = this.afAuth.auth.currentUser;
-    var userDB = this.db.database.ref('/DadosDoadores').child(usuarioLogado.uid);
+    var userDB = this.db.database.ref('/DadosLogin').child(usuarioLogado.uid);
     userDB.child(nomeCampo).set(valorCampo);
   }
 }

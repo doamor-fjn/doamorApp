@@ -22,6 +22,7 @@ export class MenuDoadorPage {
   nomeDoadorList;
 
 
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -30,7 +31,7 @@ export class MenuDoadorPage {
     //  Declaração para integração com Firebase 
     public db: AngularFireDatabase,
     public afAuth: AngularFireAuth,
-    
+
   ) {
   }
 
@@ -38,23 +39,21 @@ export class MenuDoadorPage {
   ionViewDidLoad() {
     this.storage.get('codUser')
       .then((resolve) => {
-        this.uid = resolve;
         this.getList();
       })
-
-      //this.nomeDoador = "teste";
   }
 
   // Metodo para buscar da base apartir da chave do usuário
   getList() {
+    console.log();
     var nomeTab = this.db.database.ref('DadosDoadores');
-    var addClna = nomeTab.child(this.uid);
+    var addClna = nomeTab.child('codUser');
     // Tira uma foto do banco no momento atual
     addClna.on('value', (snapshot) => {
       const items = snapshot.val();
-      if(items == null){
+      if (items == null) {
         this.navCtrl.setRoot('home');
-      }else{
+      } else {
         this.nomeDoador = items.nomeDoador;
       }
     })
@@ -66,5 +65,5 @@ export class MenuDoadorPage {
   }
 
 
-  
+
 }
