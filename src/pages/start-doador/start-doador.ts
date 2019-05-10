@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { TabsPage } from '../tabs/tabs';
 /**
  * Generated class for the StartDoadorPage page.
  *
@@ -22,6 +23,10 @@ export class StartDoadorPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StartDoadorPage');
+  }
+
+  entrar() {
+    this.navCtrl.push(TabsPage);    
   }
 
 }

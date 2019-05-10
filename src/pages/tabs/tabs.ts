@@ -4,6 +4,7 @@ import { SobrePage } from '../sobre/sobre';
 import { StartPage } from '../start/start';
 import { PerfilDoadorPage } from '../perfil-doador/perfil-doador';
 
+
 @Component({
   templateUrl: 'tabs.html'
 })
@@ -18,4 +19,7 @@ export class TabsPage {
   constructor() {
 
   }
+
+
+
 }

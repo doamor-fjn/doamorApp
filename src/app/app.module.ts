@@ -30,6 +30,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { MenuDoadorPageModule } from '../pages/menu-doador/menu-doador.module';
 import { HomePageModule } from '../pages/home/home.module';
 import { PerfilDoadorPageModule } from './../pages/perfil-doador/perfil-doador.module';
+import { MenuInstitItemPage } from '../pages/menu-instit-item/menu-instit-item';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { PerfilDoadorPageModule } from './../pages/perfil-doador/perfil-doador.m
     PopoverPerfilPage,
     //PerfilDoadorPage,
     StartPage,
-    SobrePage
+    SobrePage,
+    MenuInstitItemPage
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,8 @@ import { PerfilDoadorPageModule } from './../pages/perfil-doador/perfil-doador.m
     PopoverPerfilPage,
     PerfilDoadorPage,
     StartPage,
-    SobrePage
+    SobrePage,
+    MenuInstitItemPage
   ],
   providers: [
     StatusBar,

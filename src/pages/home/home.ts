@@ -8,6 +8,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 
 // Imports do IonicStorage
 import { Storage } from '@ionic/storage';
+import { TabsPage } from '../tabs/tabs';
 
 // Nomeia a página para redirecionamento
 @IonicPage({
@@ -52,7 +53,7 @@ export class HomePage {
         // Salva a chave do usuário do Firebase 
         this.storage.set('codUser', response.user.uid)
           .then(() => {
-            this.navCtrl.setRoot('menu-doador');
+            this.navCtrl.push(TabsPage);    
           })
           //  Quando for erro
           .catch((error) => {

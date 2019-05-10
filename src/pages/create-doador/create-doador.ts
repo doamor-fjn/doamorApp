@@ -64,12 +64,16 @@ export class CreateDoadorPage {
           // Chama o metodo para adicionar campos na tabela de Doador
           this.addDadosDoador('nomeDoador', this.registerForm.value.name);
           this.addDadosDoador('emailDoador', this.registerForm.value.email);
-          this.addDadosDoador('dataNascDoador', '01/01/0001');
+          this.addDadosDoador('dataNascDoador', '01/01/1919');
           this.addDadosDoador('sexoDoador', 'N/A');
           // Chama o metodo de pop-up 
           this.presentAlert('Usuário Cadastrado', 'Usuário cadastrado com sucesso!');
-          // Redireciona para a pagina nomeada como 'start-page' no start.ts
-          this.navCtrl.setRoot('start-doador');
+          // Salva a chave do usuário do Firebase 
+          this.storage.set('codUser', response.user.uid)
+            .then(() => {
+              // Redireciona para a pagina nomeada como 'start-page' no start.ts
+              this.navCtrl.setRoot('start-doador');
+            })
         })
       //  Quando for erro
       .catch((error) => {
